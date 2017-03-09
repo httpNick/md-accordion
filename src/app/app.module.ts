@@ -9,12 +9,14 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AccordionComponent } from './accordion/accordion.component';
 import { MaterialModule } from "@angular/material";
 import { AccordionRowComponent } from './accordion-row/accordion-row.component';
+import { AccordionRowContentComponent } from './accordion-row-content/accordion-row-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccordionComponent,
-    AccordionRowComponent
+    AccordionRowComponent,
+    AccordionRowContentComponent
   ],
   imports: [
     BrowserModule,

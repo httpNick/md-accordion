@@ -1,0 +1,6 @@
+$mat-accordion-row-content-vertical-padding: 8px;
+$mat-accordion-row-content-side-padding: 24px;
+
+p.content-container {
+  padding: $mat-accordion-row-content-vertical-padding $mat-accordion-row-content-side-padding;
+}

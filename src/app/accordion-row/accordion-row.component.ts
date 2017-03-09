@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 import { expandCollapse } from "../animation/expand-collapse.animation";
 import { rotate } from "../animation/rotate.animation";
 
@@ -7,26 +7,32 @@ import { rotate } from "../animation/rotate.animation";
   templateUrl: './accordion-row.component.html',
   styleUrls: ['./accordion-row.component.scss'],
   animations: [
-    expandCollapse(),
-    rotate(400)
+    expandCollapse(200),
+    rotate(200)
   ]
 })
 export class AccordionRowComponent implements OnInit {
 
-  @HostBinding('@expandCollapse') get _expandOrCollapse() {
-    return this.expandOrCollapse();
-  }
-
   isOpen: boolean = false;
+  canShowContent: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  switchState() {
+  openUp() {
 
     this.isOpen = !this.isOpen;
+    this.canShowContent = true;
+
+  }
+
+  handleCollapseAnimDone(event) {
+
+    if (event.fromState === 'expanded') {
+      this.canShowContent = false;
+    }
 
   }
 

@@ -1,38 +1,44 @@
+$mat-accordion-row-title-padding: 16px;
+
 :host {
-  height: 48px;
   width: 500px;
   box-shadow: 0px 0px 2px #888888;
   background-color: white;
+  overflow: hidden;
 
-  div.container {
+  div.row-container {
 
-    height: 48px;
-    display: flex;
+    div.title-container {
 
-    span:first-child {
-      margin-left: 24px;
-      font-size: 15px;
-      color: RGBA(0, 0, 0, .87);
-    }
-
-    span {
-      flex: 1 1 5em;
+      padding: $mat-accordion-row-title-padding;
       display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-content: flex-start;
-      align-items: center;
-      margin-left: 16px;
-      color: RGBA(0, 0, 0, .54);
-    }
 
-    span:last-child {
-      margin-right: 24px;
-      justify-content: flex-end;
-      color: RGBA(0, 0, 0, .38);
-      md-icon {
-        cursor: pointer;
+      span:first-child {
+        padding-left: ($mat-accordion-row-title-padding / 2);
+        font-size: 15px;
+        color: RGBA(0, 0, 0, .87);
       }
+
+      span {
+        flex: 1 1 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+        padding-left: $mat-accordion-row-title-padding;
+        color: RGBA(0, 0, 0, .54);
+      }
+
+      span:last-child {
+        padding-right: ($mat-accordion-row-title-padding / 2);
+        justify-content: flex-end;
+        color: RGBA(0, 0, 0, .38);
+        md-icon {
+          cursor: pointer;
+        }
+      }
+
     }
 
   }

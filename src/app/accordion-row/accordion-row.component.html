@@ -1,11 +1,20 @@
-<div class="container">
-  <span>Title</span>
-  <span>Subtitle</span>
-  <span>
-    <md-icon
-      (click)="switchState()"
-      [@rotate]="expandOrCollapse()">
-        keyboard_arrow_down
-    </md-icon>
-  </span>
+<div
+  fxAlign="column"
+  class="row-container"
+  [@expandCollapse]="expandOrCollapse()"
+  (@expandCollapse.done)="handleCollapseAnimDone($event)">
+  <div class="title-container">
+    <span>Title</span>
+    <span>Subtitle</span>
+    <span>
+      <md-icon
+        tabindex="0"
+        (click)="openUp()"
+        (keydown.enter)="openUp()"
+        [@rotate]="expandOrCollapse()">
+          keyboard_arrow_down
+      </md-icon>
+    </span>
+  </div>
+  <accordion-row-content *ngIf="canShowContent"></accordion-row-content>
 </div>

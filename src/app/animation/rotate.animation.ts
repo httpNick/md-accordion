@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from "@angular/core";
 
-export function rotate(duration: number = 300) {
+export function rotate(duration: number = 200) {
 
   return trigger('rotate', [
     state('collapsed', style({transform: 'rotate(0deg)'})),
