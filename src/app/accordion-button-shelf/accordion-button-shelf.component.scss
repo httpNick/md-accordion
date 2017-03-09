@@ -1,0 +1,17 @@
+$mat-accordion-row-button-shelf-vertical-padding: 16px;
+$mat-accordion-row-button-shelf-side-padding: 8px;
+
+div {
+  padding: $mat-accordion-row-button-shelf-vertical-padding $mat-accordion-row-button-shelf-side-padding;
+}
+
+button {
+  margin-left: $mat-accordion-row-button-shelf-side-padding / 2;
+  margin-right: $mat-accordion-row-button-shelf-side-padding / 2;
+  background-color: transparent;
+
+  &.save-btn {
+    color: #2196f3
+  }
+
+}

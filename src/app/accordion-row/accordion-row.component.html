@@ -16,5 +16,9 @@
       </md-icon>
     </span>
   </div>
-  <accordion-row-content *ngIf="canShowContent"></accordion-row-content>
+  <div *ngIf="canShowContent">
+    <accordion-row-content></accordion-row-content>
+    <hr>
+    <accordion-button-shelf></accordion-button-shelf>
+  </div>
 </div>

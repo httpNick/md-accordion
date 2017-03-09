@@ -10,13 +10,15 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { MaterialModule } from "@angular/material";
 import { AccordionRowComponent } from './accordion-row/accordion-row.component';
 import { AccordionRowContentComponent } from './accordion-row-content/accordion-row-content.component';
+import { AccordionButtonShelfComponent } from './accordion-button-shelf/accordion-button-shelf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccordionComponent,
     AccordionRowComponent,
-    AccordionRowContentComponent
+    AccordionRowContentComponent,
+    AccordionButtonShelfComponent
   ],
   imports: [
     BrowserModule,
